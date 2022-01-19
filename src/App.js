@@ -13,10 +13,13 @@ function App() {
         </Row>
         <Row>
           <Col xs="3">
-            <CategoryList />
+            <CategoryList
+             title="liste"
+             name='araba'
+             />
           </Col>
           <Col xs="9">
-            <ProductList />
+            <ProductList title='urunler'/>
           </Col>
         </Row>
       </Container>
