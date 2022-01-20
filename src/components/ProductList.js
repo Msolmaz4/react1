@@ -1,15 +1,13 @@
-import React from 'react';
 
 
-function ProductList(props) {
 
-
-  
+ import React, { Component } from 'react';
  
-  return <div>
-
-      <h2>{props.title}</h2>
-  </div>;
-}
-
-export default ProductList;
+ export default class ProductList extends Component {
+   render() {
+     return <div>
+        <h2>{this.props.title}-{this.props.arabaCategory7}</h2>
+     </div>;
+   }
+ }
+ 

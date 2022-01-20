@@ -1,4 +1,4 @@
-import React, { Component,useState } from "react";
+import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 export default class CategoryList extends Component {
@@ -7,13 +7,11 @@ export default class CategoryList extends Component {
       { arabaId: 1, arabaModel: "mercedes" },
       { arabaId: 2, arabaModel: "audo" },
       { arabaId: 3, arabaModel: "skida" },
-    ],
-    arabaCategory7:"9"
+    ]
+   
   };
 
-  changeCategory = category => {
-    this.setState({ arabaCategory7:category.arabaModel });
-  };
+  
 
   render() {
     return (
@@ -22,14 +20,14 @@ export default class CategoryList extends Component {
         <ListGroup flush>
           {this.state.categories.map((category) => (
             <ListGroupItem
-              onClick={() => this.changeCategory(category)}
+              onClick={() => this.props.changeCategory(category)}
               key={category.arabaId}
             >
               {category.arabaModel}
             </ListGroupItem>
           ))}
         </ListGroup>
-        <h4>{this.state.arabaCategory7}r</h4>
+        <h4>{this.props.arabaCategory7}</h4>
       </div>
     );
   }
